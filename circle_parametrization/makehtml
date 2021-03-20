@@ -1,2 +1,2 @@
 #!/bin/bash
-pandoc "$1"".md" --mathjax -s -c ~/website/real/pandoc_style.css -o "$1"".html"
+pandoc "$1"".md" --mathjax="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" -s -c ~/website/real/pandoc_style.css -o "$1"".html"

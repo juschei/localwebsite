@@ -48,3 +48,8 @@ Intuitively, what happes is
 $$g(z)= \int \frac{f'(z)}{f(z)}\,dz = \int \frac{1}{u}du = \log(u) = \log(f(z)) + c\implies e^g = f(z).$$
 This does not work without restricting the domain of the logarithm (if might not be defined on all of $D$). To make this into a formal argument we consider $h(z)=\frac{f(z)}{e^{g(z)}}$. We get that $h'(z)=0$, so since $D$ is connected, $h(z)=c$ for some $c\in \mathbb{C}$, which means $f(z) = ce^{g(z)}$, as desired.
 <br/><br>
+The next statement encapsulates the impossibility:
+**Theorem.** Let $f,h$ be holomorphic functions on a simply connected domain $D$ such that $f(z)^2 + h(z)^2=1$ for all $z\in D$. Then there exists a holomorphic function
+$g$ on $D$ such that $f(z)=\sin(g(z))$ and $h(z)=\cos(g(z))$.
+<br/>
+**Proof.**

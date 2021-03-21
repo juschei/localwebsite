@@ -39,17 +39,20 @@ At the beginning we mentioned two impossibility claims:
 1. The entire unit circle cannot be parametrized by rational functions.
 2. $\sin$ and $\cos$ cannot be written as rational functions.
 
-In order to prove this, we need a lemma from complex analysis.
+The second statement is elementary to deduce: Assume we had a rational function that agreed with $\sin$ on some connected part of the graph. Then, by the identity theorem, this rational functionand $\sin$ would have to everywhere, since the rational function is defined on all of $\mathbb{C}$ with the exception of a finite aḿount of points and $\sin$ is defined on all of $\mathbb{C}$.
 
-**Lemma.** Let $f$ be a holomorphic function on a simply connected domain $D$. If $f(z)\neq 0$ for all $x\in D$, we can write $f(z) = ce^{g(z)}$ for a constant $c\in \mathbb{C}$ and a function $g$ that is holomorphic on $D$.
+In order to prove the first statement, we need a lemma from complex analysis.
+
+**Lemma.** Let $f$ be a holomorphic function on a simply connected domain $D$. If $f(z)\neq 0$ for all $x\in D$, we can write $f(z) = e^{g(z)}$ a function $g$ that is holomorphic on $D$.
 <br/>
 **Proof.** Since $f(z)$ never vanishes, $\frac{f}{f'}$ is a well-defined holomorphic function on $D$. Since $D$ is simply connected this means that there exists an antiderivative $g$ on $D$.
 Intuitively, what happes is
 $$g(z)= \int \frac{f'(z)}{f(z)}\,dz = \int \frac{1}{u}du = \log(u) = \log(f(z)) + c\implies e^g = f(z).$$
-This does not work without restricting the domain of the logarithm (if might not be defined on all of $D$). To make this into a formal argument we consider $h(z)=\frac{f(z)}{e^{g(z)}}$. We get that $h'(z)=0$, so since $D$ is connected, $h(z)=c$ for some $c\in \mathbb{C}$, which means $f(z) = ce^{g(z)}$, as desired.
+This does not work without restricting the domain of the logarithm (if might not be defined on all of $D$). To make this into a formal argument we consider $h(z)=\frac{f(z)}{e^{g(z)}}$. We get that $h'(z)=0$, so since $D$ is connected, $h(z)=c$ for some $c\in \mathbb{C}$, which means $f(z) = ce^{g(z)}$. Now chose a logarithm of $c$ and include it as a summand in $g$. $\square$
 <br/><br>
 The next statement encapsulates the impossibility:
 **Theorem.** Let $f,h$ be holomorphic functions on a simply connected domain $D$ such that $f(z)^2 + h(z)^2=1$ for all $z\in D$. Then there exists a holomorphic function
 $g$ on $D$ such that $f(z)=\sin(g(z))$ and $h(z)=\cos(g(z))$.
 <br/>
 **Proof.**
+
